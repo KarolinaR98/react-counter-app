@@ -10,7 +10,7 @@ const Counter = (props) => {
 
     const [counter, setCounter] = useState(props.counterInitValue);
     const [showClock, setShowClock] = useState(false);
-    const [step, setStep] = useState(0);
+    const [step, setStep] = useState(1);
 
     const updateCounter = (action) => {
         if (action === "add") {
@@ -33,7 +33,7 @@ const Counter = (props) => {
     return (
         <div className="counter">
             <Display counter={counter} />
-            <ButtonsPanel updateCounter={updateCounter} />
+            <ButtonsPanel updateCounter={updateCounter} step={step}/>
             <Step updateStepValue={updateStepValue}/>
             {showClock ? <Clock setShowClock={setShowClock} /> : <p className='clockControl' onClick={() => setShowClock(true)} > Pokaż zegar</p>}
         </div >
