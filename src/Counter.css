@@ -26,3 +26,7 @@
   text-decoration: underline;
   cursor: pointer;
 }
+
+.stepSelector{
+    margin-top: 10px;
+}
